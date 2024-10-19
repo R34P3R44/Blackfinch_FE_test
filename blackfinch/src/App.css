@@ -1,55 +1,12 @@
+.App{
+  font-family: 'Star Jedi', sans-serif;
+  font-weight: 800 !important;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #f8f8f8;
-}
-
-.starships-container {
-  max-width: 900px;
-  margin: auto;
-  padding-bottom: 20px;
-  z-index: 1;
-  position: relative;
-  padding: 10px;
-  
-}
-
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
-  gap: 20px;
-}
-
-.product {
-  background: rgb(240, 240, 240);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.productContainer{
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-}
-
-.productActions {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.productActions button {
-  margin: 0 5px;
-}
-
-.notification {
-  background: #4caf50 !important;
-  color: white !important;
-  padding: 10px !important;
-  margin: 15px 0 !important;
-  border-radius: 4px !important;
 }
 
 .backgroundPicture{
@@ -62,16 +19,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-
 }
-
-.App{
-  font-family: 'Star Jedi', sans-serif;
-  font-weight: 800 !important;
-}
-
 
 @font-face {
   font-family: 'Star Jedi';
   src: url('./fonts/Orbitron/Orbitron-VariableFont_wght.ttf') format('truetype');
 }
+

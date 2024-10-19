@@ -13,3 +13,26 @@
     margin-top: 0px !important;
     
   }
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
+    gap: 20px;
+  }
+
+  .starships-container {
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 20px;
+    z-index: 1;
+    position: relative;
+    padding: 10px;
+  }
+
+  .notification {
+    background: #4caf50 !important;
+    color: white !important;
+    padding: 10px !important;
+    margin: 15px 0 !important;
+    border-radius: 4px !important;
+  }

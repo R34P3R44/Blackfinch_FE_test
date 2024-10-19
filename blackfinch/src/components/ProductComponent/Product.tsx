@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ProductList from '../ProductListComponent/ProductList';
+import './Product.css';
 
 
 interface ProductProps {
@@ -22,11 +23,11 @@ interface ProductProps {
             <p>Manufacturer: {starship.manufacturer}</p>
             <p>Cost: {starship.cost_in_credits} credits</p>
           </div>
-          <div className='productActions '>
-            <button onClick={decreaseQuantity}>-</button>
+          <div className='productActions'>
+            <button type="button" className="btn btn-secondary" onClick={decreaseQuantity}>-</button>
             <span>{quantity}</span>
-            <button onClick={increaseQuantity}>+</button>
-            <button onClick={() => onBuy(starship.name, quantity)}>BUY</button>
+            <button type="button" className="btn btn-secondary" onClick={increaseQuantity}>+</button>
+            <button type="button" className="btn btn-primary" onClick={() => onBuy(starship.name, quantity)}>BUY</button>
           </div>
         </div>
       </div>
