@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { fetchStarships } from './fetchData'
+import { fetchStarships } from '../../fetchData'
 import './ProductList.css';
+import Product from '../ProductComponent/Product'
 
 
 interface ProductList {
@@ -19,16 +20,6 @@ const ProductList: React.FC = () => {
   useEffect(() => {
     setDataForList()
   }, []);
-
-  useEffect(() => {
-    if (starships.length === 0) {
-      displayNoShipsAlert()
-    }
-  }, [starships]);
-
-  const displayNoShipsAlert = () => {
-    setNoShipsAlert(true)
-  }
 
   const setDataForList = async () => {
     const data = await fetchStarships();
@@ -52,9 +43,9 @@ const ProductList: React.FC = () => {
       } */}
       <h1 className='header'>Star Wars Starships</h1>
       <div className="product-list">
-        {/* {starships.slice(0, 10).map((starship, index) => (
+        {starships.slice(0, 10).map((starship, index) => (
           <Product key={index} starship={starship} onBuy={handleBuy} />
-        ))} */}
+        ))}
       </div>
     </div>
   );
