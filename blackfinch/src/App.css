@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.starships-container {
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 20px;
+  z-index: 1;
+  position: relative;
+  padding: 10px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
+  gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product {
+  background: rgb(240, 240, 240);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.productContainer{
   display: flex;
   flex-direction: column;
+  align-content: space-between;
+}
+
+.productActions {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.productActions button {
+  margin: 0 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.notification {
+  background: #4caf50 !important;
+  color: white !important;
+  padding: 10px !important;
+  margin: 15px 0 !important;
+  border-radius: 4px !important;
+}
+
+.backgroundPicture{
+  background: url('./images/millenium-falcon.jpg');
+  background-size: cover; 
+  opacity: 0.7;
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
+.App{
+  font-family: 'Star Jedi', sans-serif;
+  font-weight: 800 !important;
+}
+
+
+@font-face {
+  font-family: 'Star Jedi';
+  src: url('./fonts/Orbitron/Orbitron-VariableFont_wght.ttf') format('truetype');
 }
