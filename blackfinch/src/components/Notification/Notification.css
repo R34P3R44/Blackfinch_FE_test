@@ -1,12 +1,23 @@
 
-.notificationContainer {
-    background: #4caf50 !important;
-    color: white !important;
-    padding: 10px !important;
-    margin: 15px 0 !important;
-    border-radius: 4px !important;
+.notificationHeader {
+    color: rgb(0, 0, 0) ;
     font-weight: 800;
+    font-size: 25px;
+    border-radius: 5px;
+  }
+
+  .notificationBody {
+    color: rgb(0, 0, 0) ;
+    padding: 10px ;
+    margin: 15px 0 ;
+    border-radius: 4px ;
+    font-weight: 400;
     font-size: 20px;
     display: flex;
     justify-content: center;
+  }
+
+  .notificationContainer{
+    background: #56ae57;
+    border-radius: 5px;
   }
