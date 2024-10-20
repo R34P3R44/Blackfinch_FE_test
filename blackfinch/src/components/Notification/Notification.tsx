@@ -4,18 +4,28 @@ import './Notification.css';
 import Modal from 'react-bootstrap/Modal';
 
 interface NotificationProps {
-    quantity: number;
+    cartItemDetails: any;
 }
 
-const Notification: React.FC<NotificationProps> = ({ quantity }) => {
+const Notification: React.FC<NotificationProps> = ({ cartItemDetails}) => {
+
+
 
     return (        
         <Modal.Dialog className='notificationContainer'>
-            <Modal.Header>
+            <Modal.Header className='notificationHeader ms-2'>
                 <Modal.Title>Success</Modal.Title>
             </Modal.Header>
-            <Modal.Body className='m-4'>
-                <p>{`Added ${quantity} starship(s) to your basket!`}</p>
+            <Modal.Body className='m-4 notificationBody'>
+            {cartItemDetails.map((item: any) => (
+                <>
+                    <p>{'Added '}</p>
+                    <p className='mx-2 fw-bolder'>{`${item.qty}`}</p>
+                    <p>{'of '}</p>
+                    <p className='mx-2 fw-bolder text-uppercase'>{`${item.ship}`}</p>
+                    <p>{'to your basket!'}</p>
+                </>
+                ))}
             </Modal.Body>
       </Modal.Dialog>
     );

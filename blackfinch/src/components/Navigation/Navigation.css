@@ -1,0 +1,29 @@
+.navbarStyle{
+    font-size: 20px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbarFixedPosition{
+    position: fixed !important;
+    top: 0px !important;
+    z-index: 3 !important;
+    background-color: black !important;
+}
+
+.navlinkStyle{
+    color: #ffe81f !important
+}
+
+.navlinkStyle:hover{
+    color: rgba(255, 232, 31, 0.5) !important
+}
+
+.shoppingcart{
+    color: #ffe81f;
+}
+
+.cartButtonStyle{
+    background-color: transparent;
+    border: 0px;
+}

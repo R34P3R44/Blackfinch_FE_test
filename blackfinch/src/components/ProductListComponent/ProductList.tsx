@@ -3,6 +3,9 @@ import { fetchStarships } from '../../fetchData'
 import './ProductList.css';
 import Product from '../ProductComponent/Product'
 import Notification from '../Notification/Notification'
+import { globalState } from '../../Store/atom';
+import { useRecoilState } from 'recoil';
+
 
 interface ProductList {
   name: string;
@@ -19,7 +22,9 @@ interface ProductList {
 const ProductList: React.FC = () => {
   const [starships, setStarships] = useState<ProductList[]>([]);
   const [notification, setNotification] = useState<boolean>(false);
-  const [quantity, setQuantity] = useState<number>(0);
+  const [cartItemDetails, setCartItemDetails] = useState<object>({});
+  const [globalQty, setGlobalQty] = useRecoilState(globalState);
+
 
   useEffect(() => {
     setDataForList()
@@ -31,24 +36,32 @@ const ProductList: React.FC = () => {
   }
 
   const handleBuy = (name: string, quantity: number) => {
-    setQuantity(quantity)
+    let purchaseDetails = [
+      {
+        ship: name, 
+        qty: quantity
+      }
+    ]
+
+    setCartItemDetails(purchaseDetails)
+
+    setGlobalQty(quantity)
     if (quantity > 0) {
       setNotification(true)
-
     }
     setTimeout(() => {
       setNotification(false)
-    }, 2000);
+    }, 5000);
+
   };
 
 
   return (
     <>
       <div className="starships-container">
-        <h1 className='header'>Star Wars Starships</h1>
         {notification ?
         <div className='notificationPosition'>
-          <Notification quantity={quantity}/>
+          <Notification cartItemDetails={cartItemDetails}/>
         </div>
           :
           null
