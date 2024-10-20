@@ -35,3 +35,16 @@
     transform: translate(-50%, -50%);
     z-index: 10;
   }
+
+
+  @media (max-width: 576px) {
+    .product-list {
+      max-width: 300px !important;
+    }
+  }
+  
+  @media (min-width: 577px) {
+    .product-list {
+      min-width: 500px; 
+    }
+  }
