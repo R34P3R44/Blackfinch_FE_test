@@ -22,17 +22,18 @@
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 500px;
-    width: 380px;
+    width: 370px;
     opacity: 0.9;
   }
 
   .productContainer{
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 
   .submitButton{
-    width: 60px;
+    width: auto;
     height: 40px;
     border-radius: 5px;
     border: solid 0.7px black;
@@ -46,8 +47,7 @@
   .submitButton:hover{
     background-color: rgba(0, 140, 186, 0.5);
     color: #000000;
-    padding: 2%;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
     -ms-transition-duration: 0.5s;

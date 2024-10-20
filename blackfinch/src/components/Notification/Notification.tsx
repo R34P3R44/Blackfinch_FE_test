@@ -16,15 +16,15 @@ const Notification: React.FC<NotificationProps> = ({ cartItemDetails}) => {
             <Modal.Header className='notificationHeader ms-2'>
                 <Modal.Title>Success</Modal.Title>
             </Modal.Header>
-            <Modal.Body className='m-4 notificationBody'>
+            <Modal.Body className='m-2 notificationBody'>
             {cartItemDetails.map((item: any) => (
-                <>
-                    <p>{'Added '}</p>
-                    <p className='mx-2 fw-bolder'>{`${item.qty}`}</p>
-                    <p>{'of '}</p>
-                    <p className='mx-2 fw-bolder text-uppercase'>{`${item.ship}`}</p>
-                    <p>{'to your basket!'}</p>
-                </>
+                <div className='modalBodyText'>
+                    <span className='me-2'>{'Added '}</span>
+                    <span className='fw-bolder me-2'>{`${item.qty}`}</span>
+                    <span className='me-2'>{'of '}</span>
+                    <span className='fw-bolder text-uppercase me-2'>{`${item.ship}`}</span>
+                    <span>{'to your basket!'}</span>
+                </div>
                 ))}
             </Modal.Body>
       </Modal.Dialog>
