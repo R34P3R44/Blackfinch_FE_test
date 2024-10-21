@@ -22,7 +22,7 @@ const Product: React.FC<ProductProps> = ({ starship, onBuy }) => {
                 <div className='productHeaderContainer'>
                     <h1 className='productHeader'>{starship.name}</h1>
                 </div>
-                <div className='productBody'>
+                <div className='productBody w-100 p-4 h-auto'>
                     <div className='d-flex'>
                         <div className='text-uppercase fw-bolder me-2'>Model:</div>
                         <div>{starship.model === 'unknown' || '' ? 'N/A' : `${starship.model}`}</div>
